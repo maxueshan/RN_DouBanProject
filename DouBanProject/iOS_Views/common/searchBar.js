@@ -5,7 +5,7 @@
 * 搜索框
 *
 * 包含: 输入框 按钮
-* 外部传入: 如placeholder oPress onChangeText
+* 外部传入: 如placeholder onPress onChangeText
 *       使用 ...this.props 将外部传入的属性设置给TextInput 和TouchableOpacity
 *
 * */
@@ -31,7 +31,7 @@ class SearchBar extends Component{
                         {...this.props}  //onPress 通过外部传入
                     />
                 </View>
-                <TouchableOpacity style={styles.btn}>
+                <TouchableOpacity style={styles.btn} {...this.props}>
                     <Text style={styles.seachText}>搜索</Text>
                 </TouchableOpacity>
 

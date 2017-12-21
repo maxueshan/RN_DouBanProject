@@ -20,7 +20,7 @@ StatusBar.setHidden(true);
 import Navigation from './iOS_Views/common/navgation'
 //TabBarIOS管理两个模块:图书,电影
 import BookList from './iOS_Views/books/book_list'
-
+import MovieList from './iOS_Views/movies/movie_list'
 
 export default class App extends Component<> {
 
@@ -58,7 +58,7 @@ export default class App extends Component<> {
                 })
               }}
           >
-            <View style={{backgroundColor:'cyan',flex:1}}></View>
+            <Navigation component={MovieList}/>
           </TabBarIOS.Item>
 
         </TabBarIOS>

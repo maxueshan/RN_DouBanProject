@@ -20,6 +20,11 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
+  //真机运行: 使用下面的jsCodeLocation
+  //获取当前ip地址(**手机 与 电脑连接的是同一个网)
+//  jsCodeLocation = [NSURL URLWithString:@"http://本机ip:8081/index.ios.bundle"];
+
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"DouBanProject"
                                                initialProperties:nil

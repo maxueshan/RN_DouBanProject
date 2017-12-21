@@ -17,6 +17,7 @@ import Util from './../common/util'
 import SearchBar from './../common/searchBar'
 import ServiceURL from './../common/service'
 import BookItem from './book_Item'
+import BookDetail from './book_detail'
 
 class  BookList extends Component{
     constructor(){
@@ -36,6 +37,16 @@ class  BookList extends Component{
 
     }
 
+    _showDetail(bookID){
+        let route = {
+            component:BookDetail,
+            passProps:{
+                bookID:bookID
+            }
+        }
+        this.props.navigator.push(route);
+
+    }
 
     render(){
         return(
@@ -62,7 +73,7 @@ class  BookList extends Component{
 
     }
     _renderRow(book){
-        return <BookItem book={book}/>
+        return <BookItem book={book} onPress={this._showDetail(book.id)}/>
     }
     // _renderSeparator(sectionID:number,rowID:number){
     //     var style = {
